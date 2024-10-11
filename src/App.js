@@ -1,5 +1,3 @@
-// App.js
-
 import React, { useEffect, useState } from 'react';
 import RecipeCard from './RecipeCard';
 
@@ -16,8 +14,7 @@ const App = () => {
     }, [search_query]);
 
     const getRecipesFunction = async () => {
-        const response = await fetch(
-`https://api.edamam.com/search?q=${search_query}&app_id=${APP_ID}&app_key=${APP_KEY}`
+        const response = await fetch(`https://api.edamam.com/search?q=${search_query}&app_id=${APP_ID}&app_key=${APP_KEY}`
         );
         const data = await response.json();
         setfood_recipes(data.hits);
@@ -64,7 +61,7 @@ const App = () => {
                             onChange={updateSearchFunction}
                             placeholder="Search for recipes..."
                             className="w-full py-3 px-4 bg-gray-100 
-                                       border border-blue-300 focus:ring-blue-500 
+                                       border border-blue-300 
                                        focus:border-blue-500 rounded-full 
                                        text-gray-700 outline-none transition-colors 
                                        duration-200 ease-in-out focus:ring-2 
