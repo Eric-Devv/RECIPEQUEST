@@ -25,15 +25,15 @@ body {
 
 /* Header */
 header {
-    background-color: #1e3a8a; /* Deep blue */
+    background-color: #5e5e5e; /* Deep blue */
     color: white;
     padding: 2rem 0;
-    text-align: center;
+    text-align: left;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: -1px;
     line-height: 1.2;
@@ -46,21 +46,22 @@ header span {
 /* Form Section */
 form {
     background-color: white;
-    padding: 2rem;
+    padding: 1rem;
     border-radius: 12px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 1rem;
+    justify-content: left;
+    gap: 0.7rem;
+    
 }
 
 form input {
     width: 100%;
     max-width: 500px;
     padding: 0.75rem 1rem;
-    border: 2px solid #1e40af; /* Darker blue for focus */
+    border: 2px solid #000000; 
     border-radius: 25px;
     font-size: 1rem;
     outline: none;
@@ -68,12 +69,12 @@ form input {
 }
 
 form input:focus {
-    border-color: #2563eb;
+    border-color: #6f6f70;
     box-shadow: 0 0 10px rgba(37, 99, 235, 0.3);
 }
 
 form button {
-    background-color: #2563eb;
+    background-color: #0d6605;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -146,6 +147,6 @@ form button:hover {
 
 @media (min-width: 1024px) {
     header h1 {
-        font-size: 4rem;
+        font-size: 1.7rem;
     }
 }

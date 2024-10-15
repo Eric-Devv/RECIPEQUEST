@@ -34,9 +34,9 @@ const App = () => {
         <div className="bg-blue-50 min-h-screen font-sans">
             <header className="bg-blue-500 py-4 text-white">
                 <div className="container mx-auto text-center">
-                    <h1 className="text-3xl sm:text-4xl 
+                    <h1 className="text-2xl sm:text-4xl 
                                    md:text-5xl lg:text-6xl
-                                   font-extrabold tracking-tight">
+                                   font-bold tracking-tight">
                         <span className="block">
                             Recipe Finder</span>
                     </h1>
@@ -77,7 +77,7 @@ const App = () => {
                         focus:outline-none focus:ring-offset-2 
                         focus:ring-offset-blue-700"
                     >
-                        Search Recipe
+                        Search
                     </button>
                 </form>
             </div>
