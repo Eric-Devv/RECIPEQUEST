@@ -1,8 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/* Base Styles */
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -16,24 +13,18 @@ body {
     line-height: 1.6;
 }
 
-.container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
 
 /* Header */
 header {
-    background-color: #5e5e5e; /* Deep blue */
+    background-color: #cca61c; /* Deep blue */
     color: white;
-    padding: 2rem 0;
+    padding: 1em;
     text-align: left;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 2rem;
+    font-size: 2em;
     font-weight: bold;
     letter-spacing: -1px;
     line-height: 1.2;
@@ -45,15 +36,12 @@ header span {
 
 /* Form Section */
 form {
-    background-color: white;
-    padding: 1rem;
-    border-radius: 12px;
+    background-color: rgb(255, 255, 255);
+    padding: 0.9rem;
+    margin: 0;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: left;
-    gap: 0.7rem;
+    gap: 1rem;
     
 }
 
@@ -61,8 +49,8 @@ form input {
     width: 100%;
     max-width: 500px;
     padding: 0.75rem 1rem;
-    border: 2px solid #000000; 
-    border-radius: 25px;
+    border: 1px solid #000000; 
+    border-radius: 30px;
     font-size: 1rem;
     outline: none;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
@@ -74,7 +62,7 @@ form input:focus {
 }
 
 form button {
-    background-color: #0d6605;
+    background-color: #e3bb2a;
     color: white;
     border: none;
     padding: 0.75rem 1.5rem;
@@ -86,48 +74,90 @@ form button {
 }
 
 form button:hover {
-    background-color: #1d4ed8;
+    background-color: #b8b8b8;
     transform: scale(1.05);
 }
 
+h2 {
+    font-size: 1.4em;
+    line-height: 1.1;
+    padding-top: 0.5em;
+  }
+
+h3{
+    padding-top: 0.5em;
+    line-height: 1.1;
+    text-decoration: dotted;
+}
+
+  p {
+    line-height: 1.4;
+    font-size: 1rem;
+    color: #2d2c2c;
+  }  
+
+  button {
+    border-radius: 8px;
+    border: 1px solid gray;
+    margin: 0.6%;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: transparent;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    color: rgb(247, 247, 247);
+  }
+  button:hover {
+    border-color: #646cff;
+  }
+  button:focus,
+  button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0022ff;
+  }
+
+
+
+
 /* Recipe Grid */
-.grid {
+.item-card{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 4fr));
     gap: 1.5rem;
-}
+    padding: 1em;
+    
+  }
+  .recipe-card {
+    border: 1px solid #ddd;
+    border-radius: 18px;
+    padding: 10px;
+    width: fit-content;
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.1);
+    line-height: 4px;
+    background-color: #ffffff;
+    margin-bottom: 3rem;
+  }
 
-.recipe-card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.recipe-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-}
-
-.recipe-card img {
-    width: 100%;
+  img {
     height: 200px;
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 10px;
     object-fit: cover;
-}
+  }
 
-.recipe-card h3 {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #1f2937; /* Dark gray */
-    padding: 1rem;
-}
 
-.recipe-card p {
-    font-size: 0.875rem;
-    padding: 0 1rem 1rem;
-    color: #6b7280; /* Lighter gray */
-}
 
 /* Responsive Styles */
 @media (min-width: 768px) {
@@ -137,7 +167,7 @@ form button:hover {
     
     form input {
         flex-grow: 1;
-        margin-right: 1rem;
+        margin-right: 1em;
     }
 
     form button {
@@ -147,6 +177,6 @@ form button:hover {
 
 @media (min-width: 1024px) {
     header h1 {
-        font-size: 1.7rem;
+        font-size: 1.7em;
     }
 }

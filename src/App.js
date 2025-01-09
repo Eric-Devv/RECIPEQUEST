@@ -35,7 +35,7 @@ const App = () => {
             <header className="bg-blue-500 py-4 text-white">
                 <div className="container mx-auto text-center">
                     <h1 className="text-2xl sm:text-4xl 
-                                   md:text-5xl lg:text-6xl
+       f                            md:text-5xl lg:text-6xl
                                    font-bold tracking-tight">
                         <span className="block">
                             Recipe Finder</span>
@@ -83,8 +83,7 @@ const App = () => {
             </div>
 
             <div className="container mx-auto mt-8 p-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 
-                lg:grid-cols-4 gap-4">
+                <div className="item-card">
                     {food_recipes.map((recipe) => (
                         <RecipeCard key={recipe.recipe.label} recipe={recipe.recipe} />
                     ))}
